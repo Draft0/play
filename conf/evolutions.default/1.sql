@@ -1,36 +1,17 @@
-# --- Created by Ebean DDL
-# To stop Ebean DDL generation, remove this comment and start using Evolutions
+-- Table: public.users
 
-# --- !Ups
+-- DROP TABLE public.users;
 
-
-create table user (
-  id                        bigint not null,
-  email                     varchar(255),
-  password_hash             varchar(255),
-  date_creation             timestamp,
-  constraint uq_user_email unique (email),
-  constraint pk_user  primary key (id))
-;
-
-
-
-create sequence user_seq;
-
-
-
-
-# --- !Downs
-
-SET REFERENTIAL_INTEGRITY FALSE;
-
-
-
-drop table if exists user;
-
-SET REFERENTIAL_INTEGRITY TRUE;
-
-
-
-drop sequence if exists user_seq;
-
+CREATE TABLE public.users
+(
+  id integer NOT NULL,
+  email character(255) NOT NULL,
+  password character(255) NOT NULL,
+  date timestamp,
+  CONSTRAINT users_pkey PRIMARY KEY (id)
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE public.users
+  OWNER TO postgres;

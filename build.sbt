@@ -14,7 +14,8 @@ libraryDependencies ++= Seq(
   jdbc,
 filters,
   "com.adrianhurt" %% "play-bootstrap" % "1.0-P25-B3",
-  "org.postgresql" % "postgresql" % "42.0.0"
+  "org.postgresql" % "postgresql" % "42.0.0",
+  "com.zaxxer" % "HikariCP" % "2.6.1"
 
 )
   libraryDependencies += evolutions
