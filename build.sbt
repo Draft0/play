@@ -13,9 +13,13 @@ libraryDependencies ++= Seq(
   javaWs,
   jdbc,
 filters,
-  "com.adrianhurt" %% "play-bootstrap" % "1.0-P25-B3",
+  "com.efsavage.twitter.bootstrap" % "bootstrap-maven" % "2.3.1",
   "org.postgresql" % "postgresql" % "42.0.0",
-  "com.zaxxer" % "HikariCP" % "2.6.1"
+  "com.zaxxer" % "HikariCP" % "2.6.1",
+  "org.scalatestplus.play" %% "scalatestplus-play" % "1.5.1" % "test",
+  "org.avaje.ebean" % "ebean" % "9.5.1",
+  "org.mindrot" % "jbcrypt" % "0.3m"
+
 
 )
   libraryDependencies += evolutions

@@ -3,7 +3,15 @@
 # ~~~~
 
 # An example controller showing a sample home page
-GET     /                           controllers.HomeController.index
+GET     /                           controllers.HomeController.index()
+GET     /dashboard                  controllers.Dashboard.index()
+
+GET     /signup                     controllers.account.Signup.create()
+POST    /signup                     controllers.account.Signup.save()
+
+POST    /login                      controllers.HomeController.authenticate()
+GET     /logout                     controllers.HomeController.logout()
+
 # An example controller showing how to use dependency injection
 GET     /count                      controllers.CountController.count
 # An example controller showing how to write asynchronous code
